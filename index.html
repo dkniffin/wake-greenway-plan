@@ -11,24 +11,14 @@
       width: 100vw;
       height: 100vh;
     }
-
-    /* .leaflet-popup-content-wrapper {
-      width: 100%;
-    } */
   </style>
 </head>
 <body>
   <div id="map"></div>
   <script>
-    // Initialize the map and assign it to a variable for later use
-    // there's a few ways to declare a VARIABLE in javascript.
-    // you might also see people declaring variables using `const` and `let`
     var map = L.map('map', {
-        // Set latitude and longitude of the map center (required)
-        // center: [35.7799, -78.6640],
-        center: [35.7793, -78.7605],
-        // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
-        zoom: 13
+        center: [35.7785, -78.6497],
+        zoom: 12
     });
 
 
@@ -39,7 +29,7 @@
 
     // Cary
     // Adopted on 1/24/17
-    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/cary-bikeped-plan-2.png',
+    var imageUrl = 'cary-bikeped-plan-2.png',
         imageBounds = [
           [
             35.8995, // Top
@@ -54,7 +44,7 @@
 
     // Holly Springs
     // Adopted March 16, 2021
-    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/holly-springs-2.png',
+    var imageUrl = 'holly-springs-2.png',
         imageBounds = [
           [
             35.7059, // Top
@@ -69,7 +59,7 @@
 
     // Fuquay-Varina
     // Adopted 8-1-2022
-    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/fuquay-2.png',
+    var imageUrl = 'fuquay-2.png',
         imageBounds = [
           [
             35.6775, // Top
@@ -84,7 +74,7 @@
 
     // Apex
     // Updated February 23, 2016
-    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/apex-2.png',
+    var imageUrl = 'apex-2.png',
         imageBounds = [
           [
             35.7801, // Top
