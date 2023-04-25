@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Wake County Greenway Plan</title>
+  <link href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <style>
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* .leaflet-popup-content-wrapper {
+      width: 100%;
+    } */
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // Initialize the map and assign it to a variable for later use
+    // there's a few ways to declare a VARIABLE in javascript.
+    // you might also see people declaring variables using `const` and `let`
+    var map = L.map('map', {
+        // Set latitude and longitude of the map center (required)
+        // center: [35.7799, -78.6640],
+        center: [35.7793, -78.7605],
+        // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+        zoom: 13
+    });
+
+
+    // Create a Tile Layer and add it to the map
+    var tiles = new L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Cary
+    // Adopted on 1/24/17
+    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/cary-bikeped-plan-2.png',
+        imageBounds = [
+          [
+            35.8995, // Top
+            -78.9822 // Left
+          ], [
+            35.6377, // Bottom
+            -78.7134 // Right
+          ]];
+    L.imageOverlay(imageUrl, imageBounds)
+      .setOpacity(1)
+      .addTo(map);
+
+    // Holly Springs
+    // Adopted March 16, 2021
+    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/holly-springs-2.png',
+        imageBounds = [
+          [
+            35.7059, // Top
+            -78.9322 // Left
+          ], [
+            35.5687, // Bottom
+            -78.7667 // Right
+          ]];
+    L.imageOverlay(imageUrl, imageBounds)
+      .setOpacity(1)
+      .addTo(map);
+
+    // Fuquay-Varina
+    // Adopted 8-1-2022
+    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/fuquay-2.png',
+        imageBounds = [
+          [
+            35.6775, // Top
+            -78.8703 // Left
+          ], [
+            35.5366, // Bottom
+            -78.6837 // Right
+          ]];
+    L.imageOverlay(imageUrl, imageBounds)
+      .setOpacity(1)
+      .addTo(map);
+
+    // Apex
+    // Updated February 23, 2016
+    var imageUrl = 'file:///Users/dkniffin/repos/wake-greenway-plan/apex-2.png',
+        imageBounds = [
+          [
+            35.7801, // Top
+            -78.95205 // Left
+          ], [
+            35.6766, // Bottom
+            -78.7970 // Right
+          ]];
+    L.imageOverlay(imageUrl, imageBounds)
+      .setOpacity(1)
+      .addTo(map);
+  </script>
+</body>
+</html>
